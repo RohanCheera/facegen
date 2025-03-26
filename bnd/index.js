@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.use("/auth", authRouter);
 
-const uri=process.env.MONGODB_URI || "mongodb+srv://rohan:rohan@cluster0.sjgyh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri=process.env.MONGODB_URI ;
 
 mongoose.connect(uri,{dbName:"rohan"})
     .then(()=> console.log("Mongodb connected"))
